@@ -64,11 +64,11 @@ git config --global core.autocrlf input         # Mac/Linux; use "true" on Windo
    ```
 6. **Open a pull request**, either by clicking the "Compare & pull request" banner on the repo page, or:
    ```bash
-   gh pr create --fill
+   gh pr create --web
    ```
-   The description box fills in from the template. Answer its questions.
+   Either way, the description box fills in from the pull request template. Answer its questions and delete the `<!-- -->` comment lines. (`gh pr create --fill` skips the template and uses your commit message instead.)
 7. **Ask a teammate to review.** They open the pull request, read the **Files changed** tab, leave a comment, and approve.
-8. **Merge it** with the green button, then **Delete branch**.
+8. **Merge it** with the green **Merge pull request** button (not **Close pull request**, which gives up without merging). Check the label turns purple **Merged**; the branch is deleted for you.
 9. **Tidy up on your computer:**
    ```bash
    git switch main && git pull && git branch -d practice-<yourname>-first-change
